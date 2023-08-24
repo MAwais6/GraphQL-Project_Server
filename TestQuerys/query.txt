@@ -1,0 +1,69 @@
+// Get Client by ID
+{
+    client(id: "5c9e1b5b9b0b7c1f1c3b0b1e") {
+        id
+        name
+        email
+        phone
+    }
+}
+// Get all Clients
+
+{
+    clients {
+        id
+        name
+        email
+        phone
+    }
+}
+
+// Get Project by ID
+
+{
+    project(id: "5c9e1b5b9b0b7c1f1c3b0b1e") {
+        id
+        name
+        description
+        status
+        client {
+            id
+            name
+            email
+            phone
+        }
+    }
+}
+
+// Get all Projects
+
+{
+    projects {
+        id
+        name
+        description
+        status
+        client {
+            id
+            name
+            email
+            phone
+        }
+    }
+}
+
+// add client
+
+mutation {
+    addClient(
+      name: "Muhammad Awais",
+      email: "awais@gmail.com",
+      phone: "923142480572"
+    ){
+      id,
+      name,
+      email,
+      phone
+    }
+}
+
