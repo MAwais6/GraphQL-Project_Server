@@ -104,3 +104,17 @@ mutation {
     status
   }
 }
+
+// update Project
+
+mutation{
+  updateProject(
+    id:"64e7b209c5ec70c31d9826b1",
+    name:"Development Website"
+  ){
+    id,
+    name,
+    description,
+    status
+  }
+}
