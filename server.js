@@ -5,7 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT || 5000;
 
 // import mongoose connection
-const { connectDB } = require('./config/db');
+const { connectDB } = require('./schema/schemaMongodb');
 
 // import Schema files 
 const schema = require('./schema/schema');
