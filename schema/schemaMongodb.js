@@ -93,6 +93,26 @@ const mutation = new GraphQLObjectType({
                 return client.save();
             }
         },
+        // add project
+        addProject: {
+            type: ProjectType,
+            args: {
+                name: { type: new GraphQLNonNull(GraphQLString) },
+                description: { type: GraphQLString },
+                status: { type: GraphQLString },
+                clientId: { type: GraphQLID }
+            },
+            resolve(parent, args) {
+                let project = new Projects({
+                    name: args.name,
+                    description: args.description,
+                    status: args.status,
+                    clientId: args.clientId
+                });
+                return project.save();
+            }
+        }
+        
 
     }
 })

@@ -67,3 +67,18 @@ mutation {
     }
 }
 
+// add Project
+
+mutation {
+  addProject(
+    name: "Business Website",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, voluptates.",
+    status: "active"
+    clientId: "64e7afb8e1bd7ee2459cabae"
+  ){
+    id,
+    name,
+    description,
+    status
+  }
+}
