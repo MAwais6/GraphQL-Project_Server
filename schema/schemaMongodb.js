@@ -123,8 +123,19 @@ const mutation = new GraphQLObjectType({
                 });
                 return project.save();
             }
-        }
+        },
 
+        // delete project
+
+        deleteProject: {
+            type: ProjectType,
+            args: {
+                id: { type: new GraphQLNonNull(GraphQLID) }
+            },
+            resolve(parent, args) {
+                return Projects.findByIdAndDelete(args.id);
+            }
+        },
 
     }
 })
