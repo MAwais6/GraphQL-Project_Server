@@ -1,4 +1,4 @@
-### Packages which i install
+### Packages Installed
 - express
 - express-graphql
 - graphql
