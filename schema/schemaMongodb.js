@@ -1,6 +1,2 @@
-const db = require('../config/db');
+const { Projects , Clients } = require('../models/index.model');
 
-db.Project = require('../models/Project')(db.mongoose);
-db.Client = require('../models/Client')(db.mongoose);
-
-module.exports = db 
