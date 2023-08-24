@@ -50,3 +50,6 @@ const projects = [
         status: 'inactive'
     }
 ];
+
+// export data
+module.exports = { clients, projects };
