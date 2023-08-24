@@ -67,6 +67,16 @@ mutation {
     }
 }
 
+// delete a Client
+
+mutation {
+  deleteClient(id:"64e7b37b21e9c87eac7b7483"){
+    name,
+    email,
+    phone
+  }
+}
+
 // add Project
 
 mutation {
@@ -82,3 +92,4 @@ mutation {
     status
   }
 }
+
