@@ -1,13 +1,20 @@
 const express = require('express');
+const colors = require('colors');
 const { graphqlHTTP } = require('express-graphql');
 require('dotenv').config();
 const port = process.env.PORT || 5000;
 
+// import mongoose connection
+const { connectDB } = require('./config/db');
 
 // import Schema files 
 const schema = require('./schema/schema');
 
+// initialize express
 const app = express();
+
+// mongoose connection
+connectDB();
 
 // 
 app.get('/', (req, res) => {
